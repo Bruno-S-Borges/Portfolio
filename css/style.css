@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0F1923;
+    width: 100%;
+    height: 100%;
+}
+
+.barra{
+    width: 100%;
+    margin: auto;
+    background: rgba(196, 196, 196, 0.11);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0; 
+}
+
+.logo > img{
+    width: 10rem;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    gap: 5rem;
+}
+
+a{
+    font-family: Inter;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    color: white;
+    outline: none;
+    transition: ease-in-out 0.3s;
+}
+
+a:hover{
+    color: #0F1923;
+}
+
+#linha{
+    border: 0.1rem solid rgba(255, 255, 255, 0.452);;
+    border-radius: 5px;
+}
+
+.meio-container{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(63.13deg, #0F1923 51.04%, #FF4655 51.05%); 
+    z-index: 1;
+}
+
+.centralizar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20rem;
+}
+
+.infos{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+}
+
+.infos > .texto > h2{
+    width: 55rem;
+    font-family: Inter;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.meu-nome{
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-family: Special Elite, monospace;
+    font-size: 6.4rem;
+    line-height: 7.7rem;
+    color: #FF4655;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.typing-cursor {
+    animation: blinkCursor 1000ms steps(20) infinite normal, typing 2s steps(21) 1s normal both;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }to{
+        width: 48rem;
+    }
+}
+
+@keyframes blinkCursor {
+    from{
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }to{
+        border-right-color: transparent;
+    }
+}
+
+.links{
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;    
+    padding: 1rem 3rem;
+    background-color: #0F1923;
+    border: none;
+    outline: none;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+button::before, button::after{ /*Criando uma caixa que ficará atrás do texto formando uma borda gradiente animada*/
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 0.4rem);
+    height: calc(100% + 0.4rem);
+    background: linear-gradient(45deg, #5CE1E6, #FF4655);  
+    background-size: 500% 100%;
+    border-radius: 0.5rem;
+    animation: degrade-animado 3s infinite alternate;  
+    cursor: pointer;
+}
+
+@keyframes degrade-animado { /*Animando o Degrade*/
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+button > p{
+    font-family: Inter;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.9rem;
+    color: #FFFFFF;
+}    
+
+button > img{
+    color: #FFFFFF;
+}
+
+button:hover::before, button:hover::after{
+    width: calc(100% + 0.6rem);
+    height: calc(100% + 0.6rem);
+}
+
+.foto{
+    align-items: center;
+    transition: ease-in-out 0.3s;
+}
+
+.foto > img{
+    width: 60rem;
+    /*position: relative;
+    transition: ease-in-out 0.3s;
+    animation: desenhoAnimacao 2.1s infinite alternate-reverse linear;*/
+}
+
+/*@keyframes desenhoAnimacao {
+    0%{
+        top:-1.5rem
+    }
+    100%{
+        top:2.5rem
+    }
+    
+}*/
+
+.sobre-mim{
+    background-color: #0f0f23;
+    padding: 10rem;
+    position: relative;
+    z-index: 1;
+}
+
+.imagem > img{
+    width: 40rem;
+}
+
+.texto-sobre-mim{
+    width: 50%;
+}
+
+.titulo{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 3.4rem;
+    line-height: 2.9rem;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+}
+
+.texto-sobre-mim > p{
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    color: #c4c4c4;
+}
+
+.sociais{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sociais > a > button{
+    background-color: #0f0f23;
+}
+
+.projetos{
+    padding: 10rem;
+}
+
+.projetos > h1{
+    text-align: center;
+}
+
+.card{
+    width: 45rem;
+    height: 39rem;
+    background-color: #0f0f23;
+    border: 1px solid #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.card::after{
+    content: "EM BREVE";
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: #FFFFFF;
+    width: 60rem;
+    padding: 1rem;
+    background-color: #FF4655;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-50deg);
+    left: -9rem;
+    transition: ease-in-out 0.3s;
+}
+
+.card:hover::after{
+    letter-spacing: 0.5rem;
+}
+
+.card:hover{
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.card-ok{
+    width: 45rem;
+    height: 39rem;
+    background-color: #0f0f23;
+    border: 1px solid #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+    z-index: 0;
+}
+
+.desc-projeto{
+    margin-left: 2.5rem;
+}
+
+.desc-projeto > h1{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: #FFFFFF;
+}
+
+.desc-projeto > p{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #828282;
+    margin-bottom: 2rem;
+}
+
+.img-projeto{
+    width: 40rem;
+    height: 23rem;
+    background-color: #0F1923;
+    border: 1px solid #333333;
+    margin: auto;
+    cursor: pointer;
+}
+
+.links-projeto{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.links-projeto > button{
+    padding: 0.5rem 2rem;
+    gap: 0.7rem;
+    cursor: pointer;
+}
+
+.links-projeto > button > p{
+    font-size: 1.5rem
+}
+
+.centralizar1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills{
+    background-color: #0f0f23;
+    padding: 10rem;
+    text-align: center;
+}
+
+.card-skills{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333333;
+    background-color: #0F1923;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.card-skills:hover{
+    background-color: #FF4655;
+}
+
+.activo{
+    background-color: #FF4655;
+}
+
+.card-skills > img{
+    width: 90%;
+    text-align: center;
+}
+
+.central{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.desc-skills{
+    width: 80%;
+    margin: 5rem auto 0rem auto;
+}
+
+.texto-desc{
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    color: #FFFFFF;
+
+}
+
+.titulo-desc{
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    color: #FFFFFF;
+
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.footer-um > h2{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #FFFFFF;
+}
+
+.redes{
+    display: flex;
+    gap: 1rem;
+}
+
+.rodape{
+    width: 5rem;
+    height: 5rem;
+    background-color: #0f0f23;
+    border-radius: 1rem;
+}
