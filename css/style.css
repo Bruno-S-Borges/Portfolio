@@ -364,7 +364,7 @@ button:hover::before, button:hover::after{
     margin-bottom: 2rem;
 }
 
-.links-projeto > button{
+.links-projeto > a > button{
     padding: 0.5rem 2rem;
     gap: 0.7rem;
     cursor: pointer;
@@ -449,7 +449,8 @@ button:hover::before, button:hover::after{
 
 .footer{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    margin-left: 20rem;
     padding: 1rem;
 }
 
@@ -471,4 +472,23 @@ button:hover::before, button:hover::after{
     height: 5rem;
     background-color: #0f0f23;
     border-radius: 1rem;
+}
+
+#costs{
+    background-image: url("../assets/img\ projetos/costs.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#pokedex {
+    background-image: url("../assets/img\ projetos/pokedex.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#cdz{
+        background-image: url("../assets/img\ projetos/Jogo da Memória CDZ.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+
 }
