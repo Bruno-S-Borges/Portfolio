@@ -357,6 +357,13 @@ button:hover::before, button:hover::after{
     cursor: pointer;
 }
 
+.img-projeto > img {
+    width: 40rem;
+    height: 23rem;
+    margin: auto;
+    cursor: pointer;
+}
+
 .links-projeto{
     display: flex;
     justify-content: center;
@@ -462,11 +469,6 @@ button:hover::before, button:hover::after{
     color: #FFFFFF;
 }
 
-.redes{
-    display: flex;
-    gap: 1rem;
-}
-
 .rodape{
     width: 5rem;
     height: 5rem;
@@ -474,21 +476,25 @@ button:hover::before, button:hover::after{
     border-radius: 1rem;
 }
 
-#costs{
-    background-image: url("../assets/img\ projetos/costs.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+   /*  /* SCROLLBAR */
 
-#pokedex {
-    background-image: url("../assets/img\ projetos/pokedex.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+   ::-webkit-scrollbar {
+       width: 0.5rem;
+       height: 0.5rem;
+   }
 
-#cdz{
-        background-image: url("../assets/img\ projetos/Jogo da Memória CDZ.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
+   ::-webkit-scrollbar-track {
+       background: #06090f;
+   }
 
-}
+   ::-webkit-scrollbar-thumb {
+       background: #00a3ff;
+   }
+
+   /* SUPPORT SCROLLBAR */
+   @supports (scrollbar-color: #00a3ff #06090f) {
+       * {
+           scrollbar-color: #00a3ff #06090f;
+           scrollbar-width: auto;
+       }
+   }
