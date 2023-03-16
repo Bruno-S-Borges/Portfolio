@@ -521,7 +521,7 @@ a:hover {
   }
 
   .centralizar {
-    gap: 5rem;
+    gap: 1rem;
   }
 
   .sobre-mim {
@@ -624,5 +624,11 @@ a:hover {
 @media only screen and (max-width: 565px) {
   * {
     font-size: 42.5%;
+  }
+}
+
+@media only screen and (max-width: 382px) {
+  * {
+    font-size: 32.5%;
   }
 }
