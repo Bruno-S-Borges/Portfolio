@@ -632,3 +632,8 @@ a:hover {
     font-size: 32.5%;
   }
 }
+@media only screen and (max-width: 280px) {
+  * {
+    font-size: 28.5%;
+  }
+}
